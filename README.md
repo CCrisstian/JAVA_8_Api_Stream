@@ -76,3 +76,68 @@ Donde:
 -  <b>collector</b>  es un objeto Collector que define cómo se realizará la colección.
 
 <p>Además, <b>'collect'</b> es especialmente útil cuando se necesita realizar operaciones de colección en paralelo, ya que puede aprovechar las características de concurrencia de Java Streams para realizar la operación de colección de manera eficiente.</p>
+
+<h2 align="center">'Filter'</h2>
+
+<p>El operador <b>'filter'</b> en Java es una operación intermedia en streams que se utiliza para filtrar los elementos del stream según ciertos criterios definidos por un predicado. El predicado es una función que toma un elemento del stream y devuelve un valor booleano que indica si el elemento debe ser incluido en el nuevo stream resultante.</p>
+
+<p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/dd3209ae-c3e7-4d1c-8957-a173ea06bd99"></p>
+
+Donde:
+
+-  <b>T</b> es el tipo de elementos en el stream.
+  
+-  <b>predicate</b> es un objeto Predicate que define el criterio de filtrado.
+
+<p>El operador <b>'filter'</b> es una herramienta poderosa que permite seleccionar elementos específicos de un stream basándose en condiciones específicas. Es posible encadenar múltiples operadores filter para realizar filtrados más complejos y sofisticados.</p>
+
+<h2 align="center">Métodos 'findAny' y 'findFirst'</h2>
+
+<p>Los métodos <b>'findAny'</b> y <b>'findFirst'</b> son operaciones terminales en Java que se utilizan en streams para obtener un resultado de un stream. Ambos métodos devuelven un Optional, que es una clase introducida en Java para manejar valores que podrían ser nulos.</p>
+<p>Ambos métodos son útiles dependiendo del contexto y de si estás interesado en obtener cualquier elemento del stream (findAny) o el primer elemento según el orden del stream (findFirst). Ambos métodos devuelven un Optional para manejar la posibilidad de que el stream esté vacío.</p>
+
+<h3>'findAny'</h3>
+<p>El método <b>'findAny'</b> devuelve un Optional que contiene algún elemento del stream, si el stream no está vacío. No garantiza ningún orden particular para la obtención del elemento y puede ser útil cuando simplemente se desea obtener cualquier elemento del stream.</p>
+<p align="center"><img width="400" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/767fac2d-2818-4c1f-8cd3-84bb10d17278"></p>
+
+<h3>'findFirst'</h3>
+<p>El método <b>'findFirst'</b> devuelve un Optional que contiene el primer elemento del stream, si el stream no está vacío. A diferencia de <b>'findAny'</b>, <b>'findFirst'</b> garantiza el orden en el que los elementos aparecen en el stream.</p>
+<p align="center"><img width="400" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/1d4b00f9-a642-43da-8f96-72a0291cb019"></p>
+
+<h2 align="center">'Optional'</h2>
+
+<p><b>'Optional'</b> es una clase introducida en Java para manejar situaciones en las que un valor puede ser nulo. Su propósito principal es proporcionar una forma más segura y expresiva de trabajar con valores que pueden o no estar presentes, evitando así errores de referencia nula (NullPointerException).</p>
+<p>La clase Optional tiene varios métodos útiles para trabajar con valores opcionales. Algunos de los métodos más comunes incluyen:</p>
+<h3>Creación de un 'Optional':</h3>
+<p align="center"><img width="500" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/b6ec6068-029f-448b-a554-3a825e3be925"></p>
+
+-  <b>Optional.empty():</b> Crea un Optional vacío.
+  
+-  <b>Optional.of(T value):</b> Crea un Optional con el valor proporcionado. Lanza NullPointerException si el valor es nulo.
+  
+-  <b>Optional.ofNullable(T value):</b> Crea un Optional con el valor proporcionado o un Optional vacío si el valor es nulo.
+
+<h3>Obtención de un Valor:</h3>
+<p align="center"><img width="500" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/e8e4967a-af2a-4be5-a4a0-7708ff6fc3cb"></p>
+
+-  <b>get():</b> Obtiene el valor del Optional. Puede lanzar NoSuchElementException si el valor es nulo.
+  
+-  <b>orElse(T other):</b> Obtiene el valor del Optional o un valor predeterminado si el Optional está vacío.
+  
+-  <b>orElseGet(Supplier<? extends T> other):</b> Obtiene el valor del Optional o un valor proporcionado por un Supplier si el Optional está vacío.
+
+<h3>Verificación de la Presencia de un Valor:</h3>
+<p align="center"><img width="400" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/0a0b4d3c-6554-4b70-826b-25bd6bbf20d3"></p>
+
+-  <b>isPresent():</b> Devuelve true si el Optional contiene un valor, false si está vacío.
+
+<h3>Trabajo con el Valor mediante Funciones:</h3>
+<p align="center"><img width="700" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/5f11caee-7bcd-4cdb-87f6-db6ffa25188a"></p>
+
+-  <b>ifPresent(Consumer<? super T> consumer)</b>: Ejecuta una acción si el Optional contiene un valor.
+  
+-  <b>map(Function<? super T, ? extends U> mapper):</b> Aplica una función al valor del Optional si está presente y devuelve un nuevo Optional con el resultado.
+  
+-  <b>flatMap(Function<? super T, Optional<U>> mapper):</b> Similar a map, pero la función de mapeo devuelve un Optional, y se aplana el resultado.
+
+<p>La idea central de Optional es proporcionar una forma más segura y declarativa de manejar los valores opcionales, sin necesidad de comprobar constantemente</p>
