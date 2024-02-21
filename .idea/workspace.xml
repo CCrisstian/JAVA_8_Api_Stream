@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bb4580b-7d19-4fc1-84c6-2068a4938261" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream.java" afterDir="false" />
+    <list default="true" id="9bb4580b-7d19-4fc1-84c6-2068a4938261" name="Changes" comment="1er ejemplo de como crear un 'Stream'">
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_MAP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -36,6 +38,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Ejemplo_Stream.executor": "Run",
+    "Application.Ejemplo_Stream_MAP.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -43,6 +46,11 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.CCristian.Api.STREAM.Ejemplos" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -59,6 +67,19 @@
       <option name="presentableId" value="Default" />
       <updated>1708466192789</updated>
     </task>
+    <task id="LOCAL-00001" summary="1er ejemplo de como crear un 'Stream'">
+      <option name="closed" value="true" />
+      <created>1708471080712</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708471080712</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1er ejemplo de como crear un 'Stream'" />
+    <option name="LAST_COMMIT_MESSAGE" value="1er ejemplo de como crear un 'Stream'" />
   </component>
 </project>
