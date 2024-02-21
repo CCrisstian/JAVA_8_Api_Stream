@@ -59,7 +59,8 @@ Donde:
   
 -  <b>action</b> es el Consumer que realiza la acción (side-effect) en cada elemento.
 
-<p>Como <b>'peek'</b> es una operación intermedia se necesitará una operación terminal (como collect, forEach, count, etc.) al final del stream para que las operaciones intermedias se ejecuten realmente.</p
+<p>Como <b>'peek'</b> es una operación intermedia se necesitará una operación terminal (como collect, forEach, count, etc.) al final del stream para que las operaciones intermedias se ejecuten realmente.</p>
+
 
 <h2 align="center">'Collect'</h2>
 
