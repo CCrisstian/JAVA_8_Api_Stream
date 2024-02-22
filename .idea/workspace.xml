@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bb4580b-7d19-4fc1-84c6-2068a4938261" name="Changes" comment="1er ejemplo de como crear un 'Stream'">
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_MAP.java" afterDir="false" />
+    <list default="true" id="9bb4580b-7d19-4fc1-84c6-2068a4938261" name="Changes" comment="métodos:&#10;- map&#10;- peak&#10;- collect">
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_FILTER.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_FilterSINGLE.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_FilterSINGLE2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/MODELS/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_MAP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_MAP.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +42,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Ejemplo_Stream.executor": "Run",
+    "Application.Ejemplo_Stream_FILTER.executor": "Run",
+    "Application.Ejemplo_Stream_FilterSINGLE.executor": "Run",
+    "Application.Ejemplo_Stream_FilterSINGLE2.executor": "Run",
     "Application.Ejemplo_Stream_MAP.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -75,11 +82,31 @@
       <option name="project" value="LOCAL" />
       <updated>1708471080712</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="métodos:&#10;- map&#10;- peak&#10;- collect">
+      <option name="closed" value="true" />
+      <created>1708546704047</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708546704047</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1er ejemplo de como crear un 'Stream'" />
-    <option name="LAST_COMMIT_MESSAGE" value="1er ejemplo de como crear un 'Stream'" />
+    <MESSAGE value="métodos:&#10;- map&#10;- peak&#10;- collect" />
+    <option name="LAST_COMMIT_MESSAGE" value="métodos:&#10;- map&#10;- peak&#10;- collect" />
   </component>
 </project>
