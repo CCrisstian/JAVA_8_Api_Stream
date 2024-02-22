@@ -32,6 +32,33 @@
 <p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/65f7901a-df8f-40a0-9a0c-cb451b705eac"></p>
 
 
+<h2 align="center">Stream: Operadores</h2>
+
+<p>En el contexto de Java Streams, los operadores se dividen en operaciones intermedias y operaciones terminales( o finales).</p>
+
+<h3>Operaciones Intermedias:</h3>
+
+-  <b>Map:</b> Es una operación intermedia. Se utiliza para transformar cada elemento del stream y devuelve un nuevo stream con los elementos transformados.
+
+-  <b>Peek:</b> Es una operación intermedia. Se utiliza para realizar operaciones de lado (side-effects) en cada elemento del stream, pero no cambia el contenido del stream.
+
+-  <b>Filter:</b> Es una operación intermedia. Se utiliza para filtrar elementos del stream según un predicado.
+
+-  <b>Optional:</b> Optional no es una operación, sino una clase que se utiliza para manejar valores que podrían ser nulos. Puede ser utilizado en cualquier parte del código, tanto en operaciones intermedias como terminales, para manejar valores opcionales.
+
+<h3>Operaciones Terminales:</h3>
+
+-  <b>Collect:</b> Es una operación terminal. Se utiliza para transformar los elementos del stream en una colección, como una lista, un conjunto o un mapa.
+
+-  <b>FindAny:</b> Es una operación terminal. Devuelve algún elemento del stream que cumple con un predicado. No garantiza ningún orden particular.
+
+-  <b>FindFirst:</b> Es una operación terminal. Devuelve el primer elemento del stream que cumple con un predicado. Garantiza el orden en el que los elementos aparecen en el stream.
+
+-  <b>AnyMatch:</b> Es una operación terminal. Verifica si al menos un elemento del stream cumple con un predicado.
+
+<p>En resumen, los operadores finales son aquellos que terminan la ejecución del stream y producen un resultado concreto. Las operaciones intermedias que pueden ser seguidas por otras operaciones intermedias o terminales en una cadena de operaciones de stream.</p>
+
+
 <h2 align="center">'Map'</h2>
 
 <p>El operador <b>"map"</b> en Java se utiliza en los streams para transformar cada elemento del stream aplicando una función a cada uno de ellos. La función de mapeo recibe cada elemento del stream como entrada y devuelve el resultado transformado. Este operador es parte de la API de Streams introducida en Java 8 y es una operación intermedia, lo que significa que no produce un resultado final hasta que se le encadena una operación terminal.</p>
@@ -125,6 +152,10 @@ Donde:
 -  <b>orElse(T other):</b> Obtiene el valor del Optional o un valor predeterminado si el Optional está vacío.
   
 -  <b>orElseGet(Supplier<? extends T> other):</b> Obtiene el valor del Optional o un valor proporcionado por un Supplier si el Optional está vacío.
+  
+-  <b>'orElseThrow':</b> se utiliza para obtener el valor del Optional si está presente, y si el Optional está vacío, lanza una excepción proporcionada por un Supplier.
+
+<p>Estos métodos son útiles cuando se trabaja con Optional y se necesita proporcionar un valor predeterminado o lanzar una excepción en caso de que el Optional esté vacío. La elección entre 'orElse', 'orElseGet' y 'orElseThrow' depende de si el valor predeterminado o la excepción se deben evaluar independientemente de si el Optional está vacío o no.</p>
 
 <h3>Verificación de la Presencia de un Valor:</h3>
 <p align="center"><img width="400" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/0a0b4d3c-6554-4b70-826b-25bd6bbf20d3"></p>
@@ -141,3 +172,23 @@ Donde:
 -  <b>flatMap(Function<? super T, Optional<U>> mapper):</b> Similar a map, pero la función de mapeo devuelve un Optional, y se aplana el resultado.
 
 <p>La idea central de Optional es proporcionar una forma más segura y declarativa de manejar los valores opcionales, sin necesidad de comprobar constantemente</p>
+
+<h2 align="center">'anyMatch'</h2>
+
+<p>El método <b>'anyMatch'</b> es una operación terminal en Java que se utiliza en streams para verificar si al menos uno de los elementos del stream cumple con cierto predicado. Devuelve un valor booleano indicando si algún elemento satisface la condición especificada.</p>
+<p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/2d7106ba-fdd8-4342-a922-80aa5fa969e0"></p>
+Donde:
+
+-  <b>T</b> es el tipo de elementos en el stream.
+  
+-  <b>predicate</b> es un objeto Predicate que define la condición que debe cumplir al menos uno de los elementos del stream.
+  
+<p>Este método es útil cuando se desea comprobar si al menos un elemento del stream cumple con cierta condición sin tener que procesar todos los elementos del stream. Si algún elemento cumple la condición, <b>'anyMatch'</b> devuelve true; de lo contrario, devuelve false.</p>
+
+
+<h2 align="center">'count'</h2>
+
+<p>El operador <b>'count'</b> en Java es una operación terminal que se utiliza en streams para contar el número de elementos en el stream. Devuelve un valor long que representa la cantidad de elementos en el stream.</p>
+<p align="center"><img width="200" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/ddcb2757-1457-4422-82b3-a12f849429c0"></p>
+<p>El método <b>'count'</b> no toma argumentos y simplemente cuenta la cantidad de elementos en el stream.</p>
+<p>Esta operación es útil cuando simplemente se necesita obtener la cantidad de elementos en un stream y no es necesario acceder o procesar los elementos individuales. La operación <b>'count'</b> es eficiente y puede ser utilizada en streams de gran tamaño sin necesidad de cargar todos los elementos en memoria.</p>
