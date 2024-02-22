@@ -45,6 +45,14 @@
 -  <b>Filter:</b> Es una operación intermedia. Se utiliza para filtrar elementos del stream según un predicado.
 
 -  <b>Optional:</b> Optional no es una operación, sino una clase que se utiliza para manejar valores que podrían ser nulos. Puede ser utilizado en cualquier parte del código, tanto en operaciones intermedias como terminales, para manejar valores opcionales.
+  
+-  <b>distinct:</b> Elimina duplicados del stream.
+  
+-  <b>mapToInt:</b> Transforma cada elemento del stream en un tipo primitivo int.
+
+-  <b>flatMap:</b> Aplana un stream de elementos a un único nivel, útil para trabajar con streams de streams.
+
+-  <b>parallel:</b> Convierte un stream en un stream paralelo, permitiendo operaciones paralelas.
 
 <h3>Operaciones Terminales:</h3>
 
@@ -55,6 +63,15 @@
 -  <b>FindFirst:</b> Es una operación terminal. Devuelve el primer elemento del stream que cumple con un predicado. Garantiza el orden en el que los elementos aparecen en el stream.
 
 -  <b>AnyMatch:</b> Es una operación terminal. Verifica si al menos un elemento del stream cumple con un predicado.
+  
+-  <b>count:</b> Cuenta el número de elementos en el stream.
+  
+-  <b>reduce:</b> Combina los elementos del stream utilizando una operación asociativa y produce un resultado final.
+  
+-  <b>sum:</b> Calcula la suma de los elementos en un stream de números.
+  
+-  <b>summaryStatistics:</b> Calcula estadísticas (como suma, promedio, mínimo, máximo, etc.) para elementos numéricos en el stream.
+
 
 <p>En resumen, los operadores finales son aquellos que terminan la ejecución del stream y producen un resultado concreto. Las operaciones intermedias que pueden ser seguidas por otras operaciones intermedias o terminales en una cadena de operaciones de stream.</p>
 
