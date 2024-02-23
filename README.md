@@ -20,17 +20,67 @@
 <h2 align="center">Como crear un 'Stream'</h2>
 
 -  <b>Desde una colección:</b> Directamente desde una colección como una lista, un conjunto o un mapa. Aquí hay un ejemplo con una lista.
-<p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/9b10d08c-b808-4892-b82b-a5a113c3a717"></p>
+
+```java
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class StreamCreationExample {
+    public static void main(String[] args) {
+        List<String> lista = Arrays.asList("A", "B", "C", "D", "E");
+
+        // Crear un Stream a partir de una lista
+        Stream<String> streamFromList = lista.stream();
+        
+        // También puedes crear un Stream directamente desde un array
+        String[] array = {"A", "B", "C", "D", "E"};
+        Stream<String> streamFromArray = Arrays.stream(array);
+    }
+}
+```
 
 -  <b>Desde valores individuales:</b> Crear un Stream directamente desde valores individuales utilizando Stream.of().
-<p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/145cca4e-fa53-43ee-b19d-bc1b34c5e742"></p>
+
+```java
+import java.util.stream.Stream;
+
+public class StreamCreationExample {
+    public static void main(String[] args) {
+        // Crear un Stream directamente desde valores
+        Stream<String> streamOfValues = Stream.of("A", "B", "C", "D", "E");
+    }
+}
+```
 
 -  <b>Desde un rango de valores:</b> Crear un Stream que represente un rango de valores usando IntStream, LongStream, o DoubleStream. Aquí hay un ejemplo con IntStream.
-<p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/ee285518-9d7c-40b8-8602-f62eb71c6cfc"></p>
+
+```java
+import java.util.stream.IntStream;
+
+public class StreamCreationExample {
+    public static void main(String[] args) {
+        // Crear un IntStream para un rango de valores
+        IntStream intStream = IntStream.range(1, 6); // 1, 2, 3, 4, 5
+    }
+}
+```
 
 -  <b>Desde un archivo o entrada/salida:</b> Crear un Stream de líneas a partir de un archivo o de la entrada/salida estándar (System.in). Aquí hay un ejemplo básico con un archivo.
-<p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/65f7901a-df8f-40a0-9a0c-cb451b705eac"></p>
 
+```java
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
+
+public class StreamCreationExample {
+    public static void main(String[] args) throws IOException {
+        // Crear un Stream de líneas desde un archivo
+        Stream<String> lines = Files.lines(Paths.get("archivo.txt"));
+    }
+}
+```
 
 <h2 align="center">Stream: Operadores</h2>
 
@@ -80,7 +130,9 @@
 
 <p>El operador <b>"map"</b> en Java se utiliza en los streams para transformar cada elemento del stream aplicando una función a cada uno de ellos. La función de mapeo recibe cada elemento del stream como entrada y devuelve el resultado transformado. Este operador es parte de la API de Streams introducida en Java 8 y es una operación intermedia, lo que significa que no produce un resultado final hasta que se le encadena una operación terminal.</p>
 
-<p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/8e00d5d6-8eab-47d3-9022-28ad4fa60e30"></p>
+```java
+<R> Stream<R> map(Function<? super T, ? extends R> mapper)
+```
 
 Donde:
 
@@ -95,7 +147,9 @@ Donde:
 
 <p>El operador <b>'peek'</b> en Java es una operación intermedia en un stream que permite realizar operaciones de lado (side-effects) sin cambiar el contenido de los elementos del stream. A menudo se utiliza para depuración y para observar o registrar información sobre los elementos del stream durante el procesamiento.</p>
 
-<p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/d4b477f5-f698-445c-84ba-a2a3aa8ee67b"></p>
+```java
+Stream<T> peek(Consumer<? super T> action)
+```
 
 Donde:
 
@@ -110,7 +164,9 @@ Donde:
 
 <p>El método <b>'collect'</b> es una operación terminal en Java que se utiliza en streams para transformar los elementos del stream en otra forma, como una lista, un conjunto, un mapa, o cualquier otra colección. collect utiliza un Collector para realizar la acumulación de elementos en la colección deseada. Este método es muy poderoso y versátil, permitiendo a los desarrolladores especificar cómo se deben acumular y combinar los elementos.</p>
 
-<p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/39d44bc9-86cb-4446-80e7-5e70653c6584"></p>
+```java
+<R, A> R collect(Collector<? super T, A, R> collector)
+```
 
 Donde:
 
@@ -125,7 +181,9 @@ Donde:
 
 <p>El operador <b>'filter'</b> en Java es una operación intermedia en streams que se utiliza para filtrar los elementos del stream según ciertos criterios definidos por un predicado. El predicado es una función que toma un elemento del stream y devuelve un valor booleano que indica si el elemento debe ser incluido en el nuevo stream resultante.</p>
 
-<p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/dd3209ae-c3e7-4d1c-8957-a173ea06bd99"></p>
+```java
+Stream<T> filter(Predicate<? super T> predicate)
+```
 
 Donde:
 
@@ -142,18 +200,29 @@ Donde:
 
 <h3>'findAny'</h3>
 <p>El método <b>'findAny'</b> devuelve un Optional que contiene algún elemento del stream, si el stream no está vacío. No garantiza ningún orden particular para la obtención del elemento y puede ser útil cuando simplemente se desea obtener cualquier elemento del stream.</p>
-<p align="center"><img width="400" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/767fac2d-2818-4c1f-8cd3-84bb10d17278"></p>
+
+```java
+Optional<T> findAny()
+```
 
 <h3>'findFirst'</h3>
 <p>El método <b>'findFirst'</b> devuelve un Optional que contiene el primer elemento del stream, si el stream no está vacío. A diferencia de <b>'findAny'</b>, <b>'findFirst'</b> garantiza el orden en el que los elementos aparecen en el stream.</p>
-<p align="center"><img width="400" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/1d4b00f9-a642-43da-8f96-72a0291cb019"></p>
+
+```java
+Optional<T> findFirst()
+```
 
 <h2 align="center">'Optional'</h2>
 
 <p><b>'Optional'</b> es una clase introducida en Java para manejar situaciones en las que un valor puede ser nulo. Su propósito principal es proporcionar una forma más segura y expresiva de trabajar con valores que pueden o no estar presentes, evitando así errores de referencia nula (NullPointerException).</p>
 <p>La clase Optional tiene varios métodos útiles para trabajar con valores opcionales. Algunos de los métodos más comunes incluyen:</p>
 <h3>Creación de un 'Optional':</h3>
-<p align="center"><img width="500" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/b6ec6068-029f-448b-a554-3a825e3be925"></p>
+
+```java
+Optional<T> empty()
+Optional<T> of(T value)
+Optional<T> ofNullable(T value)
+```
 
 -  <b>Optional.empty():</b> Crea un Optional vacío.
   
@@ -162,7 +231,12 @@ Donde:
 -  <b>Optional.ofNullable(T value):</b> Crea un Optional con el valor proporcionado o un Optional vacío si el valor es nulo.
 
 <h3>Obtención de un Valor:</h3>
-<p align="center"><img width="500" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/e8e4967a-af2a-4be5-a4a0-7708ff6fc3cb"></p>
+
+```java
+T get()
+T orElse(T other)
+T orElseGet(Supplier<? extends T> other)
+```
 
 -  <b>get():</b> Obtiene el valor del Optional. Puede lanzar NoSuchElementException si el valor es nulo.
   
@@ -175,12 +249,20 @@ Donde:
 <p>Estos métodos son útiles cuando se trabaja con Optional y se necesita proporcionar un valor predeterminado o lanzar una excepción en caso de que el Optional esté vacío. La elección entre 'orElse', 'orElseGet' y 'orElseThrow' depende de si el valor predeterminado o la excepción se deben evaluar independientemente de si el Optional está vacío o no.</p>
 
 <h3>Verificación de la Presencia de un Valor:</h3>
-<p align="center"><img width="400" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/0a0b4d3c-6554-4b70-826b-25bd6bbf20d3"></p>
+
+```java
+boolean isPresent()
+```
 
 -  <b>isPresent():</b> Devuelve true si el Optional contiene un valor, false si está vacío.
 
 <h3>Trabajo con el Valor mediante Funciones:</h3>
-<p align="center"><img width="700" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/5f11caee-7bcd-4cdb-87f6-db6ffa25188a"></p>
+
+```java
+void ifPresent(Consumer<? super T> consumer)
+<U> Optional<U> map(Function<? super T, ? extends U> mapper)
+<U> Optional<U> flatMap(Function<? super T, Optional<U>> mapper)
+```
 
 -  <b>ifPresent(Consumer<? super T> consumer)</b>: Ejecuta una acción si el Optional contiene un valor.
   
@@ -193,7 +275,11 @@ Donde:
 <h2 align="center">'anyMatch'</h2>
 
 <p>El método <b>'anyMatch'</b> es una operación terminal en Java que se utiliza en streams para verificar si al menos uno de los elementos del stream cumple con cierto predicado. Devuelve un valor booleano indicando si algún elemento satisface la condición especificada.</p>
-<p align="center"><img width="600" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/2d7106ba-fdd8-4342-a922-80aa5fa969e0"></p>
+
+```java
+boolean anyMatch(Predicate<? super T> predicate)
+```
+
 Donde:
 
 -  <b>T</b> es el tipo de elementos en el stream.
@@ -206,6 +292,116 @@ Donde:
 <h2 align="center">'count'</h2>
 
 <p>El operador <b>'count'</b> en Java es una operación terminal que se utiliza en streams para contar el número de elementos en el stream. Devuelve un valor long que representa la cantidad de elementos en el stream.</p>
-<p align="center"><img width="200" alt="image" src="https://github.com/CCrisstian/JAVA_Api_STREAM/assets/111469216/ddcb2757-1457-4422-82b3-a12f849429c0"></p>
+
+```java
+long count()
+```
+
 <p>El método <b>'count'</b> no toma argumentos y simplemente cuenta la cantidad de elementos en el stream.</p>
 <p>Esta operación es útil cuando simplemente se necesita obtener la cantidad de elementos en un stream y no es necesario acceder o procesar los elementos individuales. La operación <b>'count'</b> es eficiente y puede ser utilizada en streams de gran tamaño sin necesidad de cargar todos los elementos en memoria.</p>
+
+
+<h2 align="center">'isEmpty'</h2>
+
+<p>En Java, el método <b>'isEmpty'</b> no es un operador de streams específico, sino un método que se utiliza en algunos tipos de datos y clases, como String y Optional, para verificar si el objeto está vacío.</p>
+
+```java
+boolean isEmpty()
+```
+
+<p>El método <b>'isEmpty'</b> en la clase String devuelve true si la cadena no contiene caracteres y false si la cadena tiene al menos un carácter.</p>
+<p>En el contexto de Optional, el método <b>'isEmpty'</b> devuelve true si el Optional está vacío (sin valor presente) y false si el Optional contiene un valor.</p>
+<p>Es importante destacar que <b>'isEmpty'</b> se utiliza en el contexto de la presencia o ausencia de valores en objetos específicos, como cadenas (String) u opcionales (Optional). No es un operador de stream, sino un método específico de esas clases. Si se esta trabajando con streams y se necesita verificar si un stream está vacío, se puede usar la operación count para contar los elementos en el stream y luego verificar si el recuento es cero.</p>
+
+
+<h2 align="center">'distinct'</h2>
+
+<p>El método <b>'distinct'</b> en Java se utiliza en streams para eliminar elementos duplicados, dejando solo una instancia de cada elemento único. Es una operación intermedia, lo que significa que no produce un resultado final hasta que se le añade una operación terminal al stream.</p>
+
+```java
+Stream<T> distinct()
+```
+
+Donde:
+
+-  <b>T:</b> es el tipo de elementos en el stream.
+
+<p>Es importante tener en cuenta que para que <b>'distinct'</b> funcione correctamente, los elementos del stream deben implementar el método <b>'hashCode'</b> y <b>'equals'</b> correctamente. Esto es porque distinct utiliza estos métodos para determinar la igualdad entre elementos y eliminar duplicados.</p>
+<p>Además, <b>'distinct'</b> utiliza un conjunto interno para realizar el seguimiento de los elementos únicos, por lo que puede cambiar el orden de los elementos en el stream si el orden es relevante en la aplicación. Si se necesita mantener el orden original, se puede usar LinkedHashSet u otras opciones dependiendo de las necesidades.</p>
+
+<h2 align="center">'reduce'</h2>
+
+<p>El método <b>'reduce'</b> en Java se utiliza en streams para combinar los elementos del stream utilizando una operación binaria y devolver un resultado final. Es una operación terminal que toma un acumulador y una función binaria para realizar la reducción de los elementos del stream a un único resultado.</p>
+
+```java
+Optional<T> reduce(BinaryOperator<T> accumulator)
+```
+
+Donde:
+
+-  <b>T</b> es el tipo de elementos en el stream.
+  
+-  <b>accumulator</b> es un objeto BinaryOperator<T> que representa la operación binaria a aplicar a los elementos del stream.
+
+<p>El resultado es envuelto en un Optional porque el stream podría estar vacío, y en ese caso, <b>'reduce'</b> devolverá un Optional vacío.</p>
+<p>También hay otra versión de <b>'reduce'</b> que toma un valor inicial (identidad) y la operación binaria:</p>
+
+```java
+T reduce(T identity, BinaryOperator<T> accumulator)
+```
+
+<p>Este método permite especificar un valor inicial que actúa como identidad en la operación binaria. La identidad es el valor que no afectará el resultado final de la reducción. Si el stream está vacío, se devolverá la identidad como resultado.</p>
+
+
+<h2 align="center">'IntStream'</h2>
+
+<p><b>'IntStream'</b> es una interfaz en Java que pertenece al paquete java.util.stream y está diseñada para trabajar específicamente con flujos de datos de tipo primitivo int. Forma parte del conjunto de interfaces introducido en Java 8 en el paquete java.util.stream para facilitar y optimizar el procesamiento de secuencias de datos.</p>
+<p><p><b>'IntStream'</b> es una interfaz en Java que pertenece al paquete java.util.stream y está diseñada para trabajar específicamente con flujos de datos de tipo primitivo int. Forma parte del conjunto de interfaces introducido en Java 8 en el paquete java.util.stream para facilitar y optimizar el procesamiento de secuencias de datos.</p> proporciona una serie de métodos especializados para operar y manipular flujos de datos de tipo int. Algunos de los métodos más comunes incluyen operaciones de filtrado, transformación, reducción y generación de secuencias.</p>
+
+<h3>Creación de un <b>'IntStream'</b>:</h3>
+
+-  'range' y 'rangeClosed':
+```java
+IntStream.range(1, 5);       // Crea un IntStream desde 1 hasta 4 (exclusivo)
+IntStream.rangeClosed(1, 5); // Crea un IntStream desde 1 hasta 5 (inclusive)
+```
+-  'of':
+```java
+IntStream.of(1, 2, 3, 4, 5); // Crea un IntStream a partir de valores específicos
+```
+
+<h3>Operaciones de Transformación y Filtrado:</h3>
+
+-  'map y mapToObj:'
+```java
+IntStream.range(1, 5)
+         .map(x -> x * 2);   // Multiplica cada elemento por 2 y devuelve un IntStream
+
+IntStream.range(1, 5)
+         .mapToObj(Integer::toString); // Convierte cada int a String y devuelve un Stream<String>
+```
+-  'filter:'
+```java
+IntStream.range(1, 10)
+         .filter(x -> x % 2 == 0); // Filtra los números pares
+```
+
+<h3>Operaciones Terminales:</h3>
+
+-  'forEach'
+```java
+IntStream.range(1, 5)
+         .forEach(System.out::println); // Imprime cada elemento en el IntStream
+```
+-  'sum'
+```java
+int suma = IntStream.range(1, 5)
+                    .sum(); // Calcula la suma de los elementos en el IntStream
+```
+-  'average'
+```java
+OptionalDouble promedio = IntStream.range(1, 5)
+                                 .average(); // Calcula el promedio de los elementos en el IntStream
+```
+
+<p>Estos son solo algunos ejemplos y <b>'IntStream'</b> ofrece muchas más operaciones útiles. El uso de <b>'IntStream'</b> puede resultar más eficiente que trabajar con un Stream<Integer> cuando se manipulan datos primitivos int.</p>
