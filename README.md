@@ -439,3 +439,44 @@ public class SummaryStatisticsExample {
 ```
 
 <p>Este método es útil cuando necesitas realizar un análisis rápido de los datos en el flujo primitivo sin tener que realizar múltiples operaciones terminales. Proporciona una forma eficiente de obtener varias estadísticas sobre los elementos del flujo en una sola llamada.</p>
+
+<h2 align="center">'mapToDouble', 'mapToInt', y 'mapToLong'</h2>
+
+<p>En Java, los métodos <b>'mapToDouble'</b>, <b>'mapToInt'</b>, y <b>'mapToLong'</b> son operaciones de mapeo que se utilizan en flujos primitivos (IntStream, LongStream, y DoubleStream, respectivamente). Estos métodos permiten convertir elementos de flujos primitivos a tipos primitivos diferentes.</p>
+
+-    <b>'mapToDouble':</b>  se utiliza en IntStream y LongStream para convertir cada elemento del flujo a un tipo primitivo double.
+  
+```java
+DoubleStream mapToDouble(ToInt/LongFunction<? extends double> mapper)
+```
+
+-    <b>'mapToInt':</b> se utiliza en LongStream y DoubleStream para convertir cada elemento del flujo a un tipo primitivo int.
+
+```java
+IntStream mapToInt(ToLong/DoubleFunction<? extends int> mapper)
+```
+
+-    <b>'mapToLong':</b> se utiliza en IntStream y DoubleStream para convertir cada elemento del flujo a un tipo primitivo long.
+
+```java
+LongStream mapToLong(ToInt/DoubleFunction<? extends long> mapper)
+```
+
+<p>Estos métodos proporcionan una forma eficiente de convertir elementos de flujos primitivos a otros tipos primitivos sin la necesidad de envolverlos en clases de envoltura (Double, Integer, Long, etc.).</p>
+
+<h2 align="center">'flatMap'</h2>
+
+<p>El operador <b>'flatMap'</b> en Java se utiliza en streams para transformar cada elemento del stream utilizando una función que devuelve otro stream, y luego "aplanar" los resultados en un solo stream. En esencia, <b>'flatMap'</b> es una combinación de las operaciones map y flatMap en una sola.</p>
+
+```java
+<R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper)
+```
+
+Donde:
+
+-    <b>T:</b> es el tipo de elementos en el stream original.
+-    <b>R:</b> es el tipo de elementos en el nuevo stream resultante.
+-    <b>mapper:</b> es una función que toma un elemento del stream original y devuelve un nuevo stream de elementos del tipo R.
+
+<p>Un caso común de uso de <b>'flatMap'</b> es cuando se tiene un stream de objetos que contienen otro stream y se desea "aplanar" esos streams internos en un solo stream.</p>
+<p><b>'flatMap'</b> es especialmente útil cuando se trabaja con estructuras de datos anidadas o colecciones de colecciones, y dr desea obtener un único stream de los elementos internos. También es utilizado con frecuencia cuando se trabaja con streams de datos en Java.</p>
