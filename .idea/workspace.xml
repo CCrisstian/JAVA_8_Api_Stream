@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bb4580b-7d19-4fc1-84c6-2068a4938261" name="Changes" comment="métodos:&#10;- Optional&#10;- anyMatch&#10;- count">
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Distinct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter_Empty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Range.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Reduce.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Reduce_Int.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_SummaryStatistics.java" afterDir="false" />
+    <list default="true" id="9bb4580b-7d19-4fc1-84c6-2068a4938261" name="Changes" comment="métodos:&#10;-distinct&#10;reduce&#10;IntStream&#10;summaryStatistics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708639071831</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="métodos:&#10;-distinct&#10;reduce&#10;IntStream&#10;summaryStatistics">
+      <option name="closed" value="true" />
+      <created>1708700309555</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708700309555</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +139,7 @@
     <MESSAGE value="métodos:&#10;- map&#10;- peak&#10;- collect" />
     <MESSAGE value="métodos:&#10;- filter&#10;- Optional" />
     <MESSAGE value="métodos:&#10;- Optional&#10;- anyMatch&#10;- count" />
-    <option name="LAST_COMMIT_MESSAGE" value="métodos:&#10;- Optional&#10;- anyMatch&#10;- count" />
+    <MESSAGE value="métodos:&#10;-distinct&#10;reduce&#10;IntStream&#10;summaryStatistics" />
+    <option name="LAST_COMMIT_MESSAGE" value="métodos:&#10;-distinct&#10;reduce&#10;IntStream&#10;summaryStatistics" />
   </component>
 </project>
