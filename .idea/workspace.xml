@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bb4580b-7d19-4fc1-84c6-2068a4938261" name="Changes" comment="métodos:&#10;- filter&#10;- Optional">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter_Count.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter_Single2.java" afterDir="false" />
+    <list default="true" id="9bb4580b-7d19-4fc1-84c6-2068a4938261" name="Changes" comment="métodos:&#10;- Optional&#10;- anyMatch&#10;- count">
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Distinct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter_Empty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Range.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Reduce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Reduce_Int.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_SummaryStatistics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_FILTER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_FilterSINGLE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter_Single.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_FilterSINGLE2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter_AnyMatch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,14 +43,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Ejemplo_Stream.executor": "Run",
+    "Application.Ejemplo_Stream_Distinct.executor": "Run",
     "Application.Ejemplo_Stream_FILTER.executor": "Run",
     "Application.Ejemplo_Stream_FilterSINGLE.executor": "Run",
     "Application.Ejemplo_Stream_FilterSINGLE2.executor": "Run",
     "Application.Ejemplo_Stream_Filter_AnyMatch.executor": "Run",
     "Application.Ejemplo_Stream_Filter_Count.executor": "Run",
+    "Application.Ejemplo_Stream_Filter_Empty.executor": "Run",
     "Application.Ejemplo_Stream_Filter_Single.executor": "Run",
     "Application.Ejemplo_Stream_Filter_Single2.executor": "Run",
     "Application.Ejemplo_Stream_MAP.executor": "Run",
+    "Application.Ejemplo_Stream_Range.executor": "Run",
+    "Application.Ejemplo_Stream_Reduce.executor": "Run",
+    "Application.Ejemplo_Stream_Reduce_Int.executor": "Run",
+    "Application.Ejemplo_Stream_SummaryStatistics.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -104,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708561909219</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="métodos:&#10;- Optional&#10;- anyMatch&#10;- count">
+      <option name="closed" value="true" />
+      <created>1708639071831</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708639071831</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +136,7 @@
     <MESSAGE value="1er ejemplo de como crear un 'Stream'" />
     <MESSAGE value="métodos:&#10;- map&#10;- peak&#10;- collect" />
     <MESSAGE value="métodos:&#10;- filter&#10;- Optional" />
-    <option name="LAST_COMMIT_MESSAGE" value="métodos:&#10;- filter&#10;- Optional" />
+    <MESSAGE value="métodos:&#10;- Optional&#10;- anyMatch&#10;- count" />
+    <option name="LAST_COMMIT_MESSAGE" value="métodos:&#10;- Optional&#10;- anyMatch&#10;- count" />
   </component>
 </project>
