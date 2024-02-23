@@ -405,3 +405,37 @@ OptionalDouble promedio = IntStream.range(1, 5)
 ```
 
 <p>Estos son solo algunos ejemplos y <b>'IntStream'</b> ofrece muchas más operaciones útiles. El uso de <b>'IntStream'</b> puede resultar más eficiente que trabajar con un Stream<Integer> cuando se manipulan datos primitivos int.</p>
+
+<h2 align="center">'summaryStatistics'</h2>
+
+<p>El método <b>'summaryStatistics'</b> en Java se utiliza en flujos primitivos, como IntStream, LongStream, y DoubleStream, para obtener estadísticas resumen sobre los elementos del flujo. Este método devuelve un objeto de la clase java.util.IntSummaryStatistics, java.util.LongSummaryStatistics, o java.util.DoubleSummaryStatistics, dependiendo del tipo de flujo.</p>
+
+```java
+IntSummaryStatistics summaryStatistics()
+LongSummaryStatistics summaryStatistics()
+DoubleSummaryStatistics summaryStatistics()
+```
+
+<p>Estos métodos están disponibles en IntStream, LongStream, y DoubleStream, respectivamente.</p>
+<p>Ejemplo utilizando IntStream:</p>
+
+```java
+import java.util.IntSummaryStatistics;
+import java.util.stream.IntStream;
+
+public class SummaryStatisticsExample {
+    public static void main(String[] args) {
+        int[] numeros = {1, 2, 3, 4, 5};
+
+        IntSummaryStatistics stats = IntStream.of(numeros).summaryStatistics();
+
+        System.out.println("Suma: " + stats.getSum());
+        System.out.println("Promedio: " + stats.getAverage());
+        System.out.println("Mínimo: " + stats.getMin());
+        System.out.println("Máximo: " + stats.getMax());
+        System.out.println("Cantidad: " + stats.getCount());
+    }
+}
+```
+
+<p>Este método es útil cuando necesitas realizar un análisis rápido de los datos en el flujo primitivo sin tener que realizar múltiples operaciones terminales. Proporciona una forma eficiente de obtener varias estadísticas sobre los elementos del flujo en una sola llamada.</p>
