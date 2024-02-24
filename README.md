@@ -40,47 +40,71 @@ public class StreamCreationExample {
 }
 ```
 
--  <b>Desde valores individuales:</b> Crear un Stream directamente desde valores individuales utilizando Stream.of().
+-    <b>'Stream.builder':</b> Es una forma de construir un Stream en Java de manera más flexible que utilizando métodos como Stream.of. Permite agregar elementos al stream a medida que se los tiene disponibles, sin necesidad de crear una colección intermedia.
+
+Ejemplo:
 
 ```java
 import java.util.stream.Stream;
 
-public class StreamCreationExample {
+public class StreamBuilderExample {
     public static void main(String[] args) {
-        // Crear un Stream directamente desde valores
-        Stream<String> streamOfValues = Stream.of("A", "B", "C", "D", "E");
+        Stream.Builder<String> builder = Stream.builder();
+
+        builder.add("Hola");
+        builder.add("Mundo");
+
+        // Construir el stream
+        Stream<String> stream = builder.build();
+
+        // Imprimir los resultados
+        stream.forEach(System.out::println);
     }
 }
+
 ```
 
--  <b>Desde un rango de valores:</b> Crear un Stream que represente un rango de valores usando IntStream, LongStream, o DoubleStream. Aquí hay un ejemplo con IntStream.
+-    <b>'Stream.of:'</b>  Es un método estático que pertenece a la clase Stream y se utiliza para crear un stream a partir de elementos individuales o de un arreglo.
+
+Ejemplo:
 
 ```java
-import java.util.stream.IntStream;
-
-public class StreamCreationExample {
-    public static void main(String[] args) {
-        // Crear un IntStream para un rango de valores
-        IntStream intStream = IntStream.range(1, 6); // 1, 2, 3, 4, 5
-    }
-}
-```
-
--  <b>Desde un archivo o entrada/salida:</b> Crear un Stream de líneas a partir de un archivo o de la entrada/salida estándar (System.in). Aquí hay un ejemplo básico con un archivo.
-
-```java
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-public class StreamCreationExample {
-    public static void main(String[] args) throws IOException {
-        // Crear un Stream de líneas desde un archivo
-        Stream<String> lines = Files.lines(Paths.get("archivo.txt"));
+public class StreamOfExample {
+    public static void main(String[] args) {
+        // Crear un stream a partir de elementos individuales
+        Stream<String> stream1 = Stream.of("Hola", "Mundo");
+
+        // Crear un stream a partir de un arreglo
+        String[] arreglo = {"Java", "es", "poderoso"};
+        Stream<String> stream2 = Stream.of(arreglo);
+
+        // Imprimir los resultados
+        stream1.forEach(System.out::println);
+        stream2.forEach(System.out::println);
     }
 }
 ```
+
+-    <b>'Stream.generate:'</b>  Es un método estático que pertenece a la clase Stream y se utiliza para generar un stream infinito de elementos mediante una función generadora.
+
+Ejemplo:
+
+```java
+import java.util.stream.Stream;
+
+public class StreamGenerateExample {
+    public static void main(String[] args) {
+        // Crear un stream infinito de números aleatorios entre 1 y 100
+        Stream<Integer> stream = Stream.generate(() -> (int) (Math.random() * 100) + 1);
+
+        // Imprimir los primeros 5 elementos del stream
+        stream.limit(5).forEach(System.out::println);
+    }
+}
+```
+
 
 <h2 align="center">Stream: Operadores</h2>
 
@@ -480,3 +504,19 @@ Donde:
 
 <p>Un caso común de uso de <b>'flatMap'</b> es cuando se tiene un stream de objetos que contienen otro stream y se desea "aplanar" esos streams internos en un solo stream.</p>
 <p><b>'flatMap'</b> es especialmente útil cuando se trabaja con estructuras de datos anidadas o colecciones de colecciones, y dr desea obtener un único stream de los elementos internos. También es utilizado con frecuencia cuando se trabaja con streams de datos en Java.</p>
+
+<h2 align="center">'parallel'</h2>
+
+<p>El método <b>'parallel()'</b> en Java se utiliza en streams para convertir un stream secuencial en un stream paralelo. Un stream paralelo permite que las operaciones en el stream se realicen en paralelo, lo que puede resultar en un mejor rendimiento al procesar grandes conjuntos de datos.</p>
+<p>La firma del método <b>'parallel()'</b> es simple y se aplica a cualquier tipo de stream:</p>
+
+```java
+Stream<T> parallel()
+```
+
+Donde:
+
+-    <b>T:</b> Es el tipo de elementos en el stream.
+
+<p>Es importante señalar que la paralelización no siempre resultará en un mejor rendimiento, ya que depende de diversos factores, incluidos el tamaño del conjunto de datos y la naturaleza de las operaciones realizadas en el stream. Además, es fundamental garantizar que las operaciones realizadas en un stream paralelo sean seguras para la concurrencia.</p>
+<p>Se debe utilizar parallel() con precaución y evaluar el rendimiento en el contexto específico de la aplicación.</p>
