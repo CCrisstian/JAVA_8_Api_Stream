@@ -1,6 +1,6 @@
-package org.CCristian.Api.STREAM.Ejemplos;
+package org.CCristian.Api_Stream.EJEMPLOS;
 
-import org.CCristian.Api.STREAM.Ejemplos.MODELS.Usuario;
+import org.CCristian.Api_Stream.MODELS.Usuario;
 
 import java.util.stream.Stream;
 

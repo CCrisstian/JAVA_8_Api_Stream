@@ -1,4 +1,4 @@
-package org.CCristian.Api.STREAM.Ejemplos;
+package org.CCristian.Api_Stream.EJEMPLOS;
 
 import java.util.stream.IntStream;
 

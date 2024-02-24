@@ -4,8 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bb4580b-7d19-4fc1-84c6-2068a4938261" name="Changes" comment="métodos:&#10;-distinct&#10;reduce&#10;IntStream&#10;summaryStatistics">
+    <list default="true" id="9bb4580b-7d19-4fc1-84c6-2068a4938261" name="Changes" comment="métodos:&#10;- distinct&#10;- reduce&#10;- IntStream&#10;- summaryStatistics">
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_StreamInfinito_Generate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Distinct_Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Distinct_Usuario_Sum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Filter_FlatMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_FlatMap_Factura.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_ListToStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Parallel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/MODELS/Factura.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Distinct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Distinct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Filter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter_AnyMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Filter_AnyMatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter_Count.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Filter_Count.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter_Empty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Filter_Empty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter_Single.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Filter_Single.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Filter_Single2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Filter_Single2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_MAP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_MAP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Range.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Reduce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Reduce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_Reduce_Int.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_Reduce_Int.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/Ejemplo_Stream_SummaryStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/EJEMPLOS/Ejemplo_Stream_SummaryStatistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/Api/STREAM/Ejemplos/MODELS/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/Api_Stream/MODELS/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +59,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Ejemplo_Stream.executor": "Run",
+    "Application.Ejemplo_StreamInfinito_Generate.executor": "Run",
     "Application.Ejemplo_Stream_Distinct.executor": "Run",
+    "Application.Ejemplo_Stream_Distinct_Usuario.executor": "Run",
+    "Application.Ejemplo_Stream_Distinct_Usuario_Sum.executor": "Run",
     "Application.Ejemplo_Stream_FILTER.executor": "Run",
     "Application.Ejemplo_Stream_FilterSINGLE.executor": "Run",
     "Application.Ejemplo_Stream_FilterSINGLE2.executor": "Run",
@@ -46,7 +71,10 @@
     "Application.Ejemplo_Stream_Filter_Empty.executor": "Run",
     "Application.Ejemplo_Stream_Filter_Single.executor": "Run",
     "Application.Ejemplo_Stream_Filter_Single2.executor": "Run",
+    "Application.Ejemplo_Stream_FlatMap_Factura.executor": "Run",
+    "Application.Ejemplo_Stream_ListToStream.executor": "Run",
     "Application.Ejemplo_Stream_MAP.executor": "Run",
+    "Application.Ejemplo_Stream_Parallel.executor": "Run",
     "Application.Ejemplo_Stream_Range.executor": "Run",
     "Application.Ejemplo_Stream_Reduce.executor": "Run",
     "Application.Ejemplo_Stream_Reduce_Int.executor": "Run",
@@ -61,6 +89,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.CCristian.Api_Stream.EJEMPLOS" />
       <recent name="org.CCristian.Api.STREAM.Ejemplos" />
     </key>
   </component>
@@ -120,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708700309555</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="métodos:&#10;- distinct&#10;- reduce&#10;- IntStream&#10;- summaryStatistics">
+      <option name="closed" value="true" />
+      <created>1708700383411</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708700383411</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +177,7 @@
     <MESSAGE value="métodos:&#10;- filter&#10;- Optional" />
     <MESSAGE value="métodos:&#10;- Optional&#10;- anyMatch&#10;- count" />
     <MESSAGE value="métodos:&#10;-distinct&#10;reduce&#10;IntStream&#10;summaryStatistics" />
-    <option name="LAST_COMMIT_MESSAGE" value="métodos:&#10;-distinct&#10;reduce&#10;IntStream&#10;summaryStatistics" />
+    <MESSAGE value="métodos:&#10;- distinct&#10;- reduce&#10;- IntStream&#10;- summaryStatistics" />
+    <option name="LAST_COMMIT_MESSAGE" value="métodos:&#10;- distinct&#10;- reduce&#10;- IntStream&#10;- summaryStatistics" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package org.CCristian.Api.STREAM.Ejemplos;
+package org.CCristian.Api_Stream.EJEMPLOS;
 
 import java.util.IntSummaryStatistics;
 import java.util.stream.IntStream;
@@ -9,8 +9,8 @@ public class Ejemplo_Stream_SummaryStatistics {
         System.out.println("\n=============================Trabando con 'summaryStatistics'=============================");
 
         IntStream enteros = IntStream
-                .range(5, 20)   /*Flujo de enteros en un rango de 5 a 20*/
-                /*Incluye 5 y No incluye 20*/
+                .range(5, 20)   /*Flujo de enteros en un rango de 5 a 20*/  /*Incluye 5 y No incluye 20*/
+                /*.rangeClosed(5, 20)*/ /*Incluye 5 y incluye 20*/
                 .peek(System.out::println);
 
         IntSummaryStatistics enteros_Statistics = enteros.summaryStatistics();
